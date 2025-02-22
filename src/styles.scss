@@ -1,0 +1,82 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "constants.scss";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h3 {
+  color: rgb(33, 57, 121) !important;
+}
+
+.btn-primary {
+  color: rgb(33, 57, 121) !important;
+  background-color: white !important;
+  border-color: rgb(33, 57, 121) !important;
+  &:hover {
+    color: white !important;
+    background-color: rgb(33, 57, 121) !important;
+  }
+}
+
+.kkkr-font {
+  color: rgb(33, 57, 121) !important;
+}
+
+.neuro-card {
+  width: 100%;
+  padding: 1.8rem 3rem;
+  border: 1px solid #c0bfbf;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.neuro-title-card {
+  width: 98%;
+  padding: 0.3rem 3rem;
+  border: 1px solid #c0bfbf;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  margin-left: 10px;
+}
+
+
+.neuro-form-card {
+  width: 98%;
+  padding: 0.3rem 3rem;
+  border: 1px solid #c0bfbf;
+  border-radius: 10px;
+  background-color: rgb(197, 234, 250);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  margin-left: 10px;
+}
+
+.neuro-btn {
+  padding: 0.7rem;
+  width: 6rem;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  background-color: rgb(33, 57, 121);
+  font-size: 14px;
+}
+
+.neuro-btn:hover {
+  background-color: rgb(33, 57, 121);
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+a {
+  color: rgb(33, 57, 121);
+}

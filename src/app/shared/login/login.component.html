@@ -1,0 +1,56 @@
+<div class="loginContainer">
+  <div class="loginMain">
+    <form class="loginModules">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          height: 56px;
+        "
+      >
+        <img
+        src="../../assets/img/logo.png"
+          alt="Basic Neuro Logo"
+          width="72px"
+        />
+        <h1 style="font-size: 20px;font-weight: 600;">BASIC NEUROLOGY</h1>
+      </div>
+      <div class="container">
+        <div class="loginHeading">Welcome</div>
+        <div class="login-placeholder">Enter your credentials to continue</div>
+        <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+          {{ errorMessage }}
+        </div>
+        <label htmlFor="username" class="loginlabel">Username</label>
+        <input
+          type="text"
+          class="loginInput"
+          [(ngModel)]="credentials.user_name"
+          name="username"
+        />
+        <label htmlFor="password" class="loginlabel">Password</label>
+        <input
+          type="password"
+          class="loginInput"
+          [(ngModel)]="credentials.user_password"
+          name="pasword"
+        />
+        <div class="forgetPassword">
+          <a href="" [routerLink]="'/forgot-password'">Forget Password?</a>
+        </div>
+  
+        <div class="loginButtons">
+          <button class="loginButton" [ngClass]="{'disabled': credentials.user_password === '' || credentials.user_name === ''}" (click)="onSubmit()">Login</button>
+        </div>
+      </div>
+      
+      <!-- <div class="or">Or</div> -->
+
+      <div class="registerAcc">
+        <a [routerLink]="'/register'">Don't have an account? Register Now!</a>
+      </div>
+    </form>
+  </div>
+</div>

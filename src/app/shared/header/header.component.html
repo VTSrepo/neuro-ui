@@ -1,0 +1,103 @@
+<!-- <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+  crossorigin="anonymous"
+/>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous"
+></script> -->
+
+
+<nav class="navbar navbar-expand-lg navbar-light" *ngIf="loggedIn">
+  <div class="container-fluid" *ngIf="showHeader">
+    <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          height: 56px;
+        "
+      >
+        <img
+        src="../../assets/img/logo.png"
+          alt="Basic Neuro Logo"
+          width="72px"
+        />
+        <h1 style="font-size: 20px;font-weight: 600;">BASIC NEUROLOGY</h1>
+      </div>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav menu-list">
+        <li class="nav-item" *ngIf="loggedIn">
+          <a class="nav-link" [routerLink]="'/home'">Dashboard</a>
+        </li>
+        <!-- <li class="nav-item" *ngIf="loggedIn">
+          <a class="nav-link" [routerLink]="'/profiles'">Admin</a>
+        </li> -->
+
+
+        <li class="nav-item dropdown" *ngIf="isAdmin">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+            <li class="dropdown-item">
+              <a class="dropdown-item" [routerLink]="'/manage-users'" href="#"
+                >Manage Users</a
+              >
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-item" [routerLink]="'/admin/events'" href="#"
+                >Manage Events</a
+              >
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-item" [routerLink]="'/manage-course'" href="#">
+                Manage Course</a
+              >
+            </li>
+            <li class="dropdown-item">
+              <a class="dropdown-item" [routerLink]="'/manage-videos'" href="#"
+                >Manage Videos</a
+              >
+            </li>
+            
+          </ul>
+        </li>
+       
+
+       
+      </ul>
+
+
+
+      <ul class="navbar-nav menu-icon-list">     
+       
+        <!-- <li class="nav-item" *ngIf="!loggedIn">
+          <a class="nav-link" [routerLink]="'/login'"
+            >Login</a>
+        </li>  -->
+        <li class="nav-item" *ngIf="loggedIn" (click)="logout()">
+          <a class="nav-link" 
+            >Logout</a>
+        </li>           
+        
+      </ul>
+    </div>
+  </div>
+</nav>

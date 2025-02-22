@@ -1,0 +1,24 @@
+<div class="neuro-card">
+  <!-- <button class="btn btn-primary" >Manage Event</button> -->
+   <h2>User Dashboard</h2>
+
+   <div class="row mt-3">
+    <div class="form-group col-lg-2">
+      <label for="courseSelected">Course:</label>
+      <select
+        class="form-select"
+        aria-label="Default select example"
+        [(ngModel)]="courseSelected"
+      >
+        <option *ngFor="let option of courses" [value]="option.name">
+          {{ option.label }}
+        </option>
+      </select>
+    </div>
+   </div>
+
+
+   <div class="row mt-3">
+    <h1>No Courses Enrolled</h1>
+   </div>
+</div>
