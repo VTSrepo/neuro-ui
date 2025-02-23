@@ -10,6 +10,7 @@ import { AuthService } from '../services/auth.service';
   providers: [],
 })
 export class HeaderComponent implements OnInit {
+  public isCollapsed = true;
   showHeader = true;
   loggedIn = false; 
   isAdmin = false;

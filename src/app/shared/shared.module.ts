@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {NgbCollapseModule} from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
@@ -13,6 +14,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { SubscriberHomeTableComponent } from './components/subscriber-home-table/subscriber-home-table.component';
 import { MaterialModule } from '../material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ActivateComponent } from './activate/activate.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ForgotPasswordComponent,
     profileTableComponent,
     SubscriberHomeTableComponent,
-    CarouselComponent
+    CarouselComponent,
+    ActivateComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     HttpClientModule,
+    NgbCollapseModule,
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,

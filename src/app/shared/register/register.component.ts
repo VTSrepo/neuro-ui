@@ -17,6 +17,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent implements OnInit {
+  hideRegForm:boolean= false;
   addUser: FormGroup = this.fb.group({
     username: [
       null,
@@ -92,6 +93,7 @@ export class RegisterComponent implements OnInit {
   ) {}
 
   onSubmit() {
+    this.hideRegForm = true;
     //name, email, username, password, phoneNumber,confirm_password
     this.credentials.username = this.addUser.get('username')?.value;
     this.credentials.name = this.addUser.get('name')?.value
@@ -100,27 +102,25 @@ export class RegisterComponent implements OnInit {
     this.credentials.confirm_password = this.addUser.get('confirm_password')?.value
     this.credentials.email = this.addUser.get('email')?.value
     
-    this.apiService.register(this.credentials).subscribe(
-      (response) => {
-        const dialogRef = this.dialog.open(InfoDialogComponent, {
-          width: '500px',
-          data: "You will receive an email notification",
-        });  
+    // this.apiService.register(this.credentials).subscribe(
+    //   (response) => {
+    //     const dialogRef = this.dialog.open(InfoDialogComponent, {
+    //       width: '500px',
+    //       data: "You will receive an email notification",
+    //     });  
         
-        dialogRef.afterClosed().subscribe(data=>{
-          this.router.navigate(['/home'])
-        })
+    //     dialogRef.afterClosed().subscribe(data=>{
+    //       this.router.navigate(['/home'])
+    //     })
         
-      },
-      (error) => {
-        console.error(error);
-        this.errorMessage = error.error.message;
-      }
-    );
+    //   },
+    //   (error) => {
+    //     console.error(error);
+    //     this.errorMessage = error.error.message;
+    //   }
+    // );
     
     
   }
 }
-function handleSubmit() {
-  throw new Error('Function not implemented.');
-}
+
