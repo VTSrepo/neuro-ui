@@ -7,9 +7,11 @@ import { SharedModule } from '../shared/shared.module';
 import { AdminRoutingModule } from './admin-routing.module';
 import { MaterialModule } from '../material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ManageVideosComponent } from './videos/manage-videos/manage-videos.component';
+import { VideoTableComponent } from './videos/video-table/video-table.component';
 
 @NgModule({
-  declarations: [ManageEventsComponent, EventCreateComponent,EventsTableComponent],
+  declarations: [ManageEventsComponent, EventCreateComponent,EventsTableComponent, ManageVideosComponent, VideoTableComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

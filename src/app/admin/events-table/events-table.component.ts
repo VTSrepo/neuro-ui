@@ -74,8 +74,8 @@ export class EventsTableComponent implements OnInit {
   goToConsult(apt: any) {
     //this.router.navigate(['/pet-consultation-home'], { state: apt });
   }
-  gotoProfile(profile:any){
-    this.router.navigate(['/profiles/create-profile'],{ state: profile });
+  gotoEvent(event:any){
+    this.router.navigate(['/admin/create-event'],{ state: event });
   }
 
 }

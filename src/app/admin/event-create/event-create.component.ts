@@ -27,12 +27,12 @@ export class EventCreateComponent implements OnInit {
     created_by: JSON.parse(localStorage.getItem('user') || '{}').user_id,
     created_date: JSON.parse(localStorage.getItem('user') || '{}').user_id,
     updated_by: null,
-    updated_date: null,   
+    updated_date: null,
   };
 
   todaysDate = '';
   courses: Course[] = [];
-  eventTypes = ['Online', 'In Person']
+  eventTypes = ['Online', 'In Person'];
 
   isAdmin: boolean = false;
 
@@ -56,18 +56,12 @@ export class EventCreateComponent implements OnInit {
     });
     if (history.state && history.state.event_id) {
       this.event = history.state;
-     
     } else {
-      this.todaysDate = this.utility.convertTodayTostr()
-
-    }   
-    
-   
+      this.todaysDate = this.utility.convertTodayTostr();
+    }
   }
 
-  
-  save() {   
-    
+  save() {
     this.event.created_by = JSON.parse(
       localStorage.getItem('user') || '{}'
     ).user_id;

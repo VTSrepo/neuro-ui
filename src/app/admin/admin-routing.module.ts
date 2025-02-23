@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {CanActivateRoute} from '../shared/services/authguard.service';
 import { ManageEventsComponent } from './manage-events/manage-events.component';
 import { EventCreateComponent } from './event-create/event-create.component';
+import { ManageVideosComponent } from './videos/manage-videos/manage-videos.component';
 const routes: Routes = [
   {
     path: '',
@@ -17,7 +18,11 @@ const routes: Routes = [
   {
     path:'create-event',
     component:EventCreateComponent
-  }
+  },
+  {
+    path: 'videos',
+    component: ManageVideosComponent,
+  },
   
 ];
 

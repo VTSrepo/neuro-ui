@@ -1,0 +1,16 @@
+<div class="neuro-title-card">
+  <div class="admin-title">
+    <h2>Manage Videos</h2>
+    <!-- <button class="btn btn-primary" (click)="goToEvent()">Create</button> -->
+  </div>
+</div>
+<div class="mt-2 neuro-title-card">
+  <div class="pt-3 pb-3" *ngIf="videos && videos.length > 0">
+    <app-video-table [videoTableData]="videos"></app-video-table>
+  </div>
+  <div class="row mt-3" *ngIf="videos.length === 0">
+    <h3>No Videos</h3>
+  </div>
+</div>
+
+
